@@ -86,7 +86,7 @@ export class Viewer extends EventDispatcher{
 
 		this.server = null;
 
-		this.fov = 60;
+		this.fov = 100;
 		this.isFlipYZ = false;
 		this.useDEMCollisions = false;
 		this.generateDEM = false;
@@ -241,7 +241,8 @@ export class Viewer extends EventDispatcher{
 			this.setPointBudget(1*1000*1000);
 			this.setShowBoundingBox(false);
 			this.setFreeze(false);
-			this.setControls(this.orbitControls);
+			//this guy right here to set default view for all viewers
+			this.setControls(this.earthControls);
 			this.setBackground('gradient');
 
 			this.scaleFactor = 1;
